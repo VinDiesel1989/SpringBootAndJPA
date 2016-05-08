@@ -66,4 +66,8 @@ public class IndusController {
 		}
 		JSONObject.parseObject("", Indus.class);
 	}
+	
+	public String testGitConflict(){
+		return "AA在这个地方做了开发.. 先提交了哈。";
+	}
 }
