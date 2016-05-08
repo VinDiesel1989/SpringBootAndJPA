@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.alliance.model.Indus;
 import com.alliance.service.IndusService;
 import com.alliance.service.TopicService;
@@ -43,7 +41,6 @@ public class IndusController {
 	}
 	
 	/**
-	 * 详细
 	 * 
 	 * @param id
 	 * @return
@@ -52,17 +49,5 @@ public class IndusController {
 		Indus  indus = new Indus();
 		indus.setId(911L);
 		return new ResponseEntity<Indus>(indus , HttpStatus.OK);
-
-	 * JSON转换
-	 * 
-	 * @param object
-	 */
-	public void converBeanToJson(Object object){
-		if(object instanceof  JSONObject){
-			
-		}else if(object  instanceof JSONArray){
-			
-		}
-		JSONObject.parseObject("", Indus.class);
 	}
 }
