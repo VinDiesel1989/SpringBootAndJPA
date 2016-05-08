@@ -66,4 +66,8 @@ public class IndusController {
 		}
 		JSONObject.parseObject("", Indus.class);
 	}
+	
+	public String gitConfictTest(){
+		return "这里是CC修改的喔 ,已经提交了.";
+	}
 }
