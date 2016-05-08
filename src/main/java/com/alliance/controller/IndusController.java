@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alliance.model.Indus;
@@ -37,5 +38,17 @@ public class IndusController {
 	public HttpEntity<List<Indus>> list(){
 		List<Indus> induss = indusService.findParenIndus();
 		return new ResponseEntity<List<Indus>>(induss, HttpStatus.OK);
+	}
+	
+	/**
+	 * 详细
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public HttpEntity<Indus> detail(@RequestParam(value = "id")Long id){
+		Indus  indus = new Indus();
+		indus.setId(911L);
+		return new ResponseEntity<Indus>(indus , HttpStatus.OK);
 	}
 }
