@@ -53,7 +53,9 @@ public class IndusController {
 		indus.setId(911L);
 		return new ResponseEntity<Indus>(indus , HttpStatus.OK);
 
-	 * JSON转换
+	}
+	
+	/** JSON转换
 	 * 
 	 * @param object
 	 */
