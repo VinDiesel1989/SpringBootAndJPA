@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.alliance.model.Indus;
 import com.alliance.service.IndusService;
 import com.alliance.service.TopicService;
@@ -37,5 +39,19 @@ public class IndusController {
 	public HttpEntity<List<Indus>> list(){
 		List<Indus> induss = indusService.findParenIndus();
 		return new ResponseEntity<List<Indus>>(induss, HttpStatus.OK);
+	}
+	
+	/**
+	 * JSON转换
+	 * 
+	 * @param object
+	 */
+	public void converBeanToJson(Object object){
+		if(object instanceof  JSONObject){
+			
+		}else if(object  instanceof JSONArray){
+			
+		}
+		JSONObject.parseObject("", Indus.class);
 	}
 }
